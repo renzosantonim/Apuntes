@@ -1,0 +1,234 @@
+{
+  "main": {
+    "id": "e0ce84ea8bb184c7",
+    "type": "split",
+    "children": [
+      {
+        "id": "91f980bf37ddc87f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "473db4c5a3ac1339",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "LabRedes/Repaso teoría.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Repaso teoría"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "3ee974b2525e762a",
+    "type": "split",
+    "children": [
+      {
+        "id": "8571cb5067fbc076",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "98ae983c34c5f600",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de archivos"
+            }
+          },
+          {
+            "id": "8ee472829a9acb34",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Buscar"
+            }
+          },
+          {
+            "id": "a4fda29c4696bebf",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 318.5
+  },
+  "right": {
+    "id": "1e71b795af40e42b",
+    "type": "split",
+    "children": [
+      {
+        "id": "2698de110ade4e8c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "25764410c514a43a",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "SSI/Apuntes primer parcial.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Enlaces entrantes de Apuntes primer parcial"
+            }
+          },
+          {
+            "id": "0d67fa3b0105fab8",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "SSI/Apuntes primer parcial.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Enlaces salientes de Apuntes primer parcial"
+            }
+          },
+          {
+            "id": "55320fa37c18c825",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Etiquetas"
+            }
+          },
+          {
+            "id": "3b22cf0509cd3503",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Todas las propiedades"
+            }
+          },
+          {
+            "id": "af24667f97e9425c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "SSI/Apuntes primer parcial.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Esquema de Apuntes primer parcial"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir selector rápido": false,
+      "graph:Abrir vista gráfica": false,
+      "canvas:Crear nuevo lienzo": false,
+      "daily-notes:Abrir la nota de hoy": false,
+      "templates:Insertar plantilla": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "bases:Crear nueva base": false
+    }
+  },
+  "active": "98ae983c34c5f600",
+  "lastOpenFiles": [
+    "Sin nombre",
+    "LabRedes/Comandos prácticas.md",
+    "LabRedes/Repaso teoría.md",
+    "Redes3/Tecnologías.md",
+    "LabRedes",
+    "AyEDA/3. Ordenación.md",
+    "Redes3",
+    "AyEDA/2.2 Ejercicios examen Búsqueda.md",
+    "AyEDA/2. Búsqueda.md",
+    "AyEDA/1. Repaso C++.md",
+    "AyEDA/1.1 Ejercicios examen C++.md",
+    "Chuleta markdown.md",
+    "SSI/Apuntes segundo parcial/4. Criptografía de Curvas Elípticas (ECC).md",
+    "AyEDA",
+    "SSI/Apuntes segundo parcial/5..md",
+    "SSI/Apuntes segundo parcial/3. Criptosistema ElGamal (Estándar).md",
+    "SSI/Apuntes segundo parcial/2. Firmas Digitales con RSA.md",
+    "SSI/Apuntes segundo parcial/1. Criptografía de Clave Pública y RSA.md",
+    "SSI/Apuntes primer parcial/8. AES - Rijndael.md",
+    "SSI/Apuntes primer parcial/5. GPS y Código L1 C-A.md",
+    "SSI/Apuntes segundo parcial",
+    "SSI/Apuntes primer parcial/4. LFSR.md",
+    "SSI/Apuntes primer parcial/1. Cifrados clásicos.md",
+    "SSI/Apuntes primer parcial/9. Modo CBC.md",
+    "SSI/Apuntes primer parcial SSI.zip",
+    "SSI/Apuntes primer parcial.zip",
+    "SSI/Apuntes primer parcial/7. Introducción al cifrado en bloque.md",
+    "SSI/Apuntes primer parcial/6. SNOW 3G.md",
+    "SSI/Apuntes primer parcial/3. ChaCha20.md",
+    "Archivos adjuntos/Pasted image 20260405103511.png",
+    "SSI/Apuntes primer parcial/4. LFSR",
+    "Archivos adjuntos/Pasted image 20260405103100.png",
+    "SSI/Apuntes primer parcial/2. Introducción al cifrado en flujo.md",
+    "SSI/Apuntes primer parcial/0. Introducción.md",
+    "Archivos adjuntos/Pasted image 20260404112802.png",
+    "Archivos adjuntos/Pasted image 20260404104548.png",
+    "Archivos adjuntos/Pasted image 20260404102847.png",
+    "Archivos adjuntos/Pasted image 20260404102835.png",
+    "Archivos adjuntos/Pasted image 20260404102815.png",
+    "Archivos adjuntos/Pasted image 20260404102608.png",
+    "Archivos adjuntos/Pasted image 20260404100712.png",
+    "Archivos adjuntos/Pasted image 20260404100607.png",
+    "Archivos adjuntos",
+    "SSI/Apuntes primer parcial",
+    "SSI"
+  ]
+}
