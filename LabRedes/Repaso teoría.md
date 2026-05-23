@@ -194,7 +194,7 @@ resolvectl flush-caches
 
 ---
 
-## **6️⃣ Firewall y NAT (explicado más a fondo)**
+## **6. Firewall y NAT
 
 ### **Firewall (RouterOS)**
 
@@ -214,7 +214,7 @@ resolvectl flush-caches
     - Permitir tráfico establecido: `connection-state=established action=accept`.
     - Bloquear paquetes inválidos: `connection-state=invalid action=drop`.
 
-### **NAT**
+### **NAT** (NO ENTRA)
 
 - **Objetivo:** Traducir direcciones IP y/o puertos para conectividad y seguridad.
 - **Tipos:**
