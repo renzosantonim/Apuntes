@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LabRedes/Repaso teoría.md",
+                "file": "AyEDA/4. Árboles.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Repaso teoría"
+              "title": "4. Árboles"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 318.5
+    "width": 200
   },
   "right": {
     "id": "1e71b795af40e42b",
@@ -183,19 +183,19 @@
       "bases:Crear nueva base": false
     }
   },
-  "active": "98ae983c34c5f600",
+  "active": "473db4c5a3ac1339",
   "lastOpenFiles": [
-    "Sin nombre",
-    "LabRedes/Comandos prácticas.md",
-    "LabRedes/Repaso teoría.md",
-    "Redes3/Tecnologías.md",
-    "LabRedes",
     "AyEDA/3. Ordenación.md",
-    "Redes3",
-    "AyEDA/2.2 Ejercicios examen Búsqueda.md",
     "AyEDA/2. Búsqueda.md",
     "AyEDA/1. Repaso C++.md",
     "AyEDA/1.1 Ejercicios examen C++.md",
+    "LabRedes/Repaso teoría.md",
+    "Sin nombre",
+    "LabRedes/Comandos prácticas.md",
+    "Redes3/Tecnologías.md",
+    "LabRedes",
+    "Redes3",
+    "AyEDA/2.2 Ejercicios examen Búsqueda.md",
     "Chuleta markdown.md",
     "SSI/Apuntes segundo parcial/4. Criptografía de Curvas Elípticas (ECC).md",
     "AyEDA",
@@ -228,7 +228,6 @@
     "Archivos adjuntos/Pasted image 20260404100712.png",
     "Archivos adjuntos/Pasted image 20260404100607.png",
     "Archivos adjuntos",
-    "SSI/Apuntes primer parcial",
-    "SSI"
+    "SSI/Apuntes primer parcial"
   ]
 }
