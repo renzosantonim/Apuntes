@@ -23,14 +23,14 @@ En los exámenes suelen pedir:
 
 Los conjuntos solución suelen escribirse como intervalos.
 
-| Intervalo | Significado |
-|---|---|
-| $(a,b)$ | $a < x < b$ |
-| $[a,b]$ | $a \leq x \leq b$ |
-| $(a,b]$ | $a < x \leq b$ |
-| $[a,b)$ | $a \leq x < b$ |
-| $(a,+\infty)$ | $x > a$ |
-| $(-\infty,a)$ | $x < a$ |
+| Intervalo     | Significado       |
+| ------------- | ----------------- |
+| $(a,b)$       | $a < x < b$       |
+| $[a,b]$       | $a \leq x \leq b$ |
+| $(a,b]$       | $a < x \leq b$    |
+| $[a,b)$       | $a \leq x < b$    |
+| $(a,+\infty)$ | $x > a$           |
+| $(-\infty,a)$ | $x < a$           |
 
 Importante:
 
