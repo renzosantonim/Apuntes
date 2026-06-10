@@ -1,5 +1,3 @@
-# Tema 4 — Máquinas de Turing
-
 ## 0. Idea general del tema
 
 Hasta ahora hemos estudiado modelos de computación con potencia limitada:
@@ -58,7 +56,7 @@ La cabeza puede:
 > Una Máquina de Turing es una tupla:
 >
 > $$
-> M = (Q, \Sigma, \Gamma, q_0, \blank, F, \delta)
+> M = (Q, \Sigma, \Gamma, q_0, \sqcup, F, \delta)
 > $$
 >
 > donde:
@@ -67,7 +65,7 @@ La cabeza puede:
 > - $\Sigma$ es el alfabeto de entrada.
 > - $\Gamma$ es el alfabeto de cinta.
 > - $q_0 \in Q$ es el estado inicial.
-> - $\blank \in \Gamma$ es el símbolo blanco.
+> - $\sqcup \in \Gamma$ es el símbolo blanco.
 > - $F \subseteq Q$ es el conjunto de estados de aceptación.
 > - $\delta$ es la función de transición.
 
@@ -160,7 +158,7 @@ $$
 pero:
 
 $$
-\blank \notin \Sigma
+\sqcup \notin \Sigma
 $$
 
 Ejemplo:
@@ -170,7 +168,7 @@ $$
 $$
 
 $$
-\Gamma = \{a,b,c,d,\blank\}
+\Gamma = \{a,b,c,d,\sqcup\}
 $$
 
 Aquí $c$ y $d$ podrían usarse como marcas auxiliares.
@@ -182,7 +180,7 @@ Aquí $c$ y $d$ podrían usarse como marcas auxiliares.
 El símbolo blanco se suele representar como:
 
 $$
-\blank
+\sqcup
 $$
 
 Indica que una celda está vacía.
@@ -191,11 +189,11 @@ Indica que una celda está vacía.
 > El blanco pertenece al alfabeto de cinta, pero no al alfabeto de entrada:
 >
 > $$
-> \blank \in \Gamma
+> \sqcup \in \Gamma
 > $$
 >
 > $$
-> \blank \notin \Sigma
+> \sqcup \notin \Sigma
 > $$
 
 ---
@@ -233,7 +231,7 @@ $$
 $$
 
 $$
-\Gamma = \{a,b,\blank\}
+\Gamma = \{a,b,\sqcup\}
 $$
 
 $$
@@ -255,7 +253,7 @@ $$
 $$
 
 $$
-\delta(q_1,\blank) = (q_2,\blank,L)
+\delta(q_1,\sqcup) = (q_2,\sqcup,L)
 $$
 
 ## ¿Qué hace esta máquina?
@@ -524,7 +522,7 @@ $$
 $$
 
 $$
-\delta(q_1,\blank) = (q_2,\blank,R)
+\delta(q_1,\sqcup) = (q_2,\sqcup,R)
 $$
 
 No definimos transición para:
@@ -628,7 +626,7 @@ $$
 $$
 
 $$
-\delta(q_4,\blank) = (q_5,\blank,L)
+\delta(q_4,\sqcup) = (q_5,\sqcup,L)
 $$
 
 Estado final:
