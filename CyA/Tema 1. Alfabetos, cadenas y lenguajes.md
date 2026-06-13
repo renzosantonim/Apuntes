@@ -68,7 +68,9 @@ Ejemplos sobre:
 cadenas válidas:
 
 ```
-0101111010101
+01
+011
+11010101
 ```
 
 ---

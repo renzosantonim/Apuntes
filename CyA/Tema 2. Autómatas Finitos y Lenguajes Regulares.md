@@ -155,24 +155,24 @@ Las expresiones regulares sobre $\Sigma$ se definen recursivamente:
 ## 5. Correspondencia entre expresiones regulares y lenguajes
 
 | Expresión regular | Lenguaje representado |
-|---|---|
-| $\emptyset$ | $\emptyset$ |
-| $\varepsilon$ | $\{\varepsilon\}$ |
-| $a$ | $\{a\}$ |
-| $r|s$ | $L(r) \cup L(s)$ |
-| $rs$ | $L(r)L(s)$ |
-| $r^*$ | $L(r)^*$ |
+| ----------------- | --------------------- |
+| $\emptyset$       | $\emptyset$           |
+| $\varepsilon$     | $\{\varepsilon\}$     |
+| $a$               | $\{a\}$               |
+| $r                | s$                    |
+| $rs$              | $L(r)L(s)$            |
+| $r^*$             | $L(r)^*$              |
 
 ---
 
 ## 6. Lectura intuitiva
 
-| Operador | Lectura |
-|---|---|
-| $r|s$ | $r$ o $s$ |
-| $rs$ | $r$ seguido de $s$ |
-| $r^*$ | cero o más repeticiones de $r$ |
-| $r^+$ | una o más repeticiones de $r$ |
+| Operador | Lectura                        |
+| -------- | ------------------------------ |
+| $r       | s$                             |
+| $rs$     | $r$ seguido de $s$             |
+| $r^*$    | cero o más repeticiones de $r$ |
+| $r^+$    | una o más repeticiones de $r$  |
 
 > [!tip]
 > Antes de operar formalmente con una expresión regular, conviene leerla en lenguaje natural.

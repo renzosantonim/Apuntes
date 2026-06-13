@@ -1,5 +1,4 @@
-
-## Enero 2023
+## ==Enero 2023==
 
 ### 1. Expresión regular y DFA mínimo (2 puntos)
 Dada la expresión regular:
@@ -105,7 +104,7 @@ for (int x = 1; x <= n; x++)
 
 ---
 
-## Enero 2024/2025
+## ==Enero 2024/2025
 
 ### 1. Expresión regular y DFA mínimo (2 puntos)
 Dada la expresión regular:
@@ -167,7 +166,7 @@ for (int i = 1; i <= n; i++)
 
 ---
 
-## Febrero 2022
+## ==Febrero 2022==
 
 ### 1. Expresión regular y autómata finito (2 puntos)
 Considere el lenguaje L = { 0$^n$ 1$^m$ | n + m es impar } sobre el alfabeto `Σ = {0, 1}`.
@@ -213,7 +212,7 @@ Muestre la tabla correspondiente al coeficiente binomial `C(7, 4)`. (0.5 puntos)
 
 ---
 
-## Junio 2023
+## ==Junio 2023==
 
 ### 1. Expresión regular, autómata y gramática independiente del contexto (2 puntos)
 Sea `L` el lenguaje formado por todas las cadenas binarias `w`, con `|w| % 4 = 0`, en las que cada bloque de cuatro símbolos contiene al menos dos ceros consecutivos. Los bloques comenzarán siempre en posiciones múltiplo de 4.
@@ -322,4 +321,83 @@ for (int a = 1; a <= n; a++)
   for (int b = 1; b <= n; b++)
     for (int c = 1; c <= b; c++)
       suma++;
+```
+ ---
+## ==Enero 2026==
+### 1. Expresión regular, NFA y DFA mínimo (2 puntos)
+Sea L el lenguaje formado por todas las cadenas w, sobre el alfabeto Σ = {a, b}, tal que w comienza por a y tiene una b en la penúltima posición.
+
+a) Especificar una expresión regular que represente a L. (0.5 Puntos)
+b) Diseñar un NFA que reconozca L. (0.75 Puntos)
+c) Diseñar un DFA mínimo que reconozca L̅. (0.75 Puntos)
+
+### 2. Lenguajes independientes del contexto y cierre (2 puntos)
+Sean L₁ y L₂ dos lenguajes independientes del contexto definidos sobre un alfabeto Σ y ⊙ una operación definida de la siguiente forma:
+
+L₁ ⊙ L₂ = { x · w₁ · w₂ · x }
+
+donde x ∈ Σ, w₁ ∈ L₁ y w₂ ∈ L₂.
+
+¿Es el conjunto de los lenguajes independientes del contexto cerrado bajo la operación ⊙? Si la respuesta es afirmativa se deberá demostrar, y si no lo es, se deberá proporcionar un contraejemplo.
+(2 Puntos)
+
+### 3. Máquina de Turing (2 puntos)
+Diseñar una máquina de Turing que acepte el lenguaje formado por todas las cadenas binarias que tienen igual número de ceros que de unos (en cualquier orden de aparición).
+
+Antes de diseñar la máquina, explicar brevemente el modo de funcionamiento que se planea para la misma. Para cada transición o conjunto de transiciones de la máquina de Turing, describir lo que se pretende hacer con las transiciones en cuestión. Dibujar el diagrama de transiciones de la máquina.
+(2 Puntos)
+
+### 4. Potencia de matrices Divide y Vencerás (2 puntos)
+Dada una matriz `A` cuadrada de tamaño `n × n` con un número de filas/columnas potencia de 2, `n = 2ᵏ`, `k` entero no negativo, la expresión para calcular la potencia `e` de dicha matriz `A` es el siguiente:
+
+`Aᵉ = `
+  `I`                               si `e = 0`
+  `A`                               si `e = 1`
+  `A^{e/2} · A^{e/2}`               si `e > 1` y `e` es par
+  `A^{(e-1)/2} · A^{(e-1)/2} · A`   si `e > 1` y `e` es impar
+
+donde `I` es la matriz identidad de dimensión `n × n`.
+
+Dada la clase `typedef vector<vector<int>> matrix`, con la siguiente funcionalidad ya desarrollada:
+
+• `n = A.size()`: valor de `n`
+• `matrix I(const int n)`: genera matriz de identidad de dimensión `n`
+• `matrix operator*(const matrix& A, const matrix& B)`: procedimiento recursivo Divide-y-Vencerás tipo Strassen que devuelve el producto de dos matrices, con una complejidad de `Θ(n².⁸)`
+• Las filas y columnas se indexan desde 0
+
+Se pide:
+a) Desarrollar el algoritmo recursivo (en pseudo-C++) de tipo Divide-y-Vencerás que implemente el operador potencia ( `^` ) sobre una matriz, y que tenga la siguiente cabecera:
+
+`matrix operator^(const matrix& A, const unsigned e);`
+
+(1.5 puntos)
+
+b) Calcular la tasa de crecimiento `T(n)` del algoritmo del apartado anterior y, usando el Teorema Maestro, la complejidad en notación `Θ(·)`. (0.5 puntos)
+
+Nota: En la corrección de este ejercicio se tendrá muy en cuenta la eficiencia en la implementación y su diseño.
+### 5. Verdadero/Falso y test (2 puntos)
+Contestar Verdadero (V) o Falso (F) o elegir la/s respuesta/s correcta/s para cada una de las siguientes preguntas.
+Notas aclaratorias:
+
+• Completar esta pregunta directamente en esta hoja.
+• Por cada respuesta correcta se sumará 0.2 puntos.
+• Por cada respuesta incorrecta se restará 0.2 puntos.
+• Las preguntas sin responder se considerarán incorrectas.
+• La puntuación mínima de esta pregunta es de 0 puntos.
+
+(1) ε pertenece a todos los alfabetos Σ.
+(2) El conjunto de todos los lenguajes posibles sobre un alfabeto Σ es infinito no numerable.
+(3) Un lenguaje L cumple la condición L* = L⁺ si ε ∈ L.
+(4) El lema del bombeo para lenguajes regulares es una herramienta que se utiliza para demostrar que un lenguaje es regular.
+(5) Un lenguaje es recursivo si existe una máquina de Turing que acepta sus cadenas.
+(6) La Tesis de Church-Turing es un teorema matemático que ha sido demostrado formalmente.
+(7) El algoritmo CYK permite decidir si una cadena pertenece o no a un lenguaje generado por una gramática en Forma Normal de Chomsky.
+(8) Θ(9n² log n⁸) = Θ(√(9n²) log n⁸).
+(9) T(n) = 2T(n/4) + 1, T(n) = Θ(log n).
+(10) La complejidad del siguiente bloque de código es Θ(n):
+```cpp
+int suma = 0;
+for (int i = 1; i <= n; i *= 2)
+  for (int j = 1; j <= n; j++)
+    suma++;
 ```
