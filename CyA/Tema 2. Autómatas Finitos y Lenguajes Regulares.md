@@ -1037,48 +1037,7 @@ significa:
 
 ## 4. Ejemplo sencillo
 
-Supongamos un NFA con:
-
-$$
-Q = \{q_0,q_1\}
-$$
-
-$$
-\Sigma = \{0,1\}
-$$
-
-Transiciones:
-
-$$
-\delta(q_0,0)=\{q_0,q_1\}
-$$
-
-$$
-\delta(q_0,1)=\{q_1\}
-$$
-
-$$
-\delta(q_1,0)=\emptyset
-$$
-
-$$
-\delta(q_1,1)=\{q_0,q_1\}
-$$
-
-Los estados posibles del DFA son:
-
-$$
-\emptyset,\ \{q_0\},\ \{q_1\},\ \{q_0,q_1\}
-$$
-
-Transiciones:
-
-| Estado DFA | Con 0 | Con 1 |
-|---|---|---|
-| $\emptyset$ | $\emptyset$ | $\emptyset$ |
-| $\{q_0\}$ | $\{q_0,q_1\}$ | $\{q_1\}$ |
-| $\{q_1\}$ | $\emptyset$ | $\{q_0,q_1\}$ |
-| $\{q_0,q_1\}$ | $\{q_0,q_1\}$ | $\{q_0,q_1\}$ |
+![[Pasted image 20260614113253.png]]
 
 ---
 
