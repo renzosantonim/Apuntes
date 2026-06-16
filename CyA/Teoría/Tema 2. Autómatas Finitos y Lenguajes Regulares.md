@@ -2605,15 +2605,15 @@ $$
 
 Busca primero el patrón del lenguaje.
 
-| Lenguaje | Expresión regular típica |
-|---|---|
-| Todas las cadenas sobre $\{a,b\}$ | $(a|b)^*$ |
-| Cadenas que contienen `ab` | $(a|b)^*ab(a|b)^*$ |
-| Cadenas que terminan en `ab` | $(a|b)^*ab$ |
-| Cadenas que empiezan por `ab` | $ab(a|b)^*$ |
-| Cadenas con número par de `a` | $b^*(ab^*ab^*)^*$ |
-| Cadenas con número impar de `a` | $b^*ab^*(ab^*ab^*)^*$ |
-| Cadenas sin `11` | $(0|10)^*(\varepsilon|1)$ |
+| Lenguaje                          | Expresión regular típica |
+| --------------------------------- | ------------------------ |
+| Todas las cadenas sobre $\{a,b\}$ | $(ab)^*$                 |
+| Cadenas que contienen `ab`        | $(ab)^*ab(ab)^*$         |
+| Cadenas que terminan en `ab`      | $(ab)^*ab$               |
+| Cadenas que empiezan por `ab`     | $ab(ab)^*$               |
+| Cadenas con número par de `a`     | $b^*(ab^*ab^*)^*$        |
+| Cadenas con número impar de `a`   | $b^*ab^*(ab^*ab^*)^*$    |
+| Cadenas sin `11`                  | $(010)^*(\varepsilon1)$  |
 
 ---
 
