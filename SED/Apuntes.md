@@ -1239,6 +1239,10 @@ Por eso, para diseñar contadores con biestables T:
 
 El JK es más general.
 
+- **J (Jump / Set):** Quiere poner el bit a `1`.
+    
+- **K (Kill / Reset):** Quiere poner el bit a `0`.
+
 Tabla de funcionamiento:
 
 |J|K|Acción|
@@ -1284,7 +1288,6 @@ El RS tiene dos entradas:
 - (S): set, poner a 1.
     
 - (R): reset, poner a 0.
-    
 
 Tabla típica activa a nivel alto:
 
@@ -1297,12 +1300,12 @@ Tabla típica activa a nivel alto:
 
 Tabla de excitación RS:
 
-|Q|Q+|S|R|
-|---|---|---|---|
-|0|0|0|X|
-|0|1|1|0|
-|1|0|0|1|
-|1|1|X|0|
+| Q   | Q+  | S   | R   |
+| --- | --- | --- | --- |
+| 0   | 0   | 0   | X   |
+| 0   | 1   | 1   | 0   |
+| 1   | 0   | 0   | 1   |
+| 1   | 1   | X   | 0   |
 
 Con RS hay que evitar la combinación prohibida.
 
