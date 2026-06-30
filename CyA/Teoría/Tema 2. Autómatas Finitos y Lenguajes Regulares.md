@@ -1904,7 +1904,7 @@ El lema de bombeo se usa para demostrar que ciertos lenguajes no son regulares.
 ## 2. Enunciado
 
 > [!definition]
-> Si $L$ es un lenguaje regular, entonces existe una constante $p \geq 1$ tal que toda cadena $w \in L$ con $|w| \geq p$ puede escribirse como:
+> Si $L$ es un lenguaje regular, entonces existe una constante $N \geq 1$ tal que toda cadena $w \in L$ con $|w| \geq N$ puede escribirse como:
 >
 > $$
 > w = xyz
@@ -1912,7 +1912,7 @@ El lema de bombeo se usa para demostrar que ciertos lenguajes no son regulares.
 >
 > cumpliendo:
 >
-> 1. $|xy| \leq p$
+> 1. $|xy| \leq N$
 > 2. $|y| > 0$
 > 3. Para todo $i \geq 0$:
 >
@@ -1958,16 +1958,16 @@ $$
 
 ---
 
-## 5. Condición $|xy| \leq p$
+## 5. Condición $|xy| \leq N$
 
-Esta condición significa que $x$ e $y$ están dentro de los primeros $p$ símbolos de la cadena.
+Esta condición significa que $x$ e $y$ están dentro de los primeros $N$ símbolos de la cadena.
 
-En muchos ejercicios elegimos una cadena donde los primeros $p$ símbolos son todos iguales.
+En muchos ejercicios elegimos una cadena donde los primeros $N$ símbolos son todos iguales.
 
 Por ejemplo:
 
 $$
-w = a^p b^p
+w = a^N b^N
 $$
 
 Así sabemos que $y$ solo puede estar formada por símbolos `a`.
@@ -2014,17 +2014,17 @@ Valores habituales:
 
 > Supongamos, por reducción al absurdo, que $L$ es regular.
 >
-> Entonces existe una constante de bombeo $p$.
+> Entonces existe una constante de bombeo $N$.
 >
-> Elegimos la cadena $w = \dots \in L$ con $|w| \geq p$.
+> Elegimos la cadena $w = \dots \in L$ con $|w| \geq N$.
 >
 > Por el lema de bombeo, $w$ puede escribirse como $w = xyz$, cumpliendo:
 >
-> 1. $|xy| \leq p$
+> 1. $|xy| \leq N$
 > 2. $|y| > 0$
 > 3. $xy^iz \in L$ para todo $i \geq 0$
 >
-> Como $|xy| \leq p$, la subcadena $y$ está formada solo por $\dots$
+> Como $|xy| \leq N$, la subcadena $y$ está formada solo por $\dots$
 >
 > Además, como $|y| > 0$, $y$ contiene al menos un símbolo.
 >

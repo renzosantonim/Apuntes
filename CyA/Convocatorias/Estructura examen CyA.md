@@ -1,4 +1,4 @@
-La estructura de los exámenes de CyA suele ser la siguiente:
+ººLa estructura de los exámenes de CyA suele ser la siguiente:
 
 |**Pregunta**|**Tema Principal**|**Tipología de Ejercicio**|
 |---|---|---|
