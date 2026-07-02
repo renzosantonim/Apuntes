@@ -104,114 +104,6 @@ for (int x = 1; x <= n; x++)
 
 ---
 
-## ==Enero 2024/2025
-
-### 1. Expresión regular y DFA mínimo (2 puntos)
-Dada la expresión regular:
-
-```text
-(a|b*)* ca * c
-```
-
-Utilice los algoritmos necesarios para obtener un DFA con un número mínimo de estados que reconozca el lenguaje representado por la expresión.
-
-Explique los pasos que se siguen para pasar de la expresión regular al DFA minimizado. No exponga directamente el autómata minimizado.
-
----
-### 2. Gramática ambigua, autómata y gramática regular (2 puntos)
-Dada la siguiente gramática `G`:
-
-```text
-S → A | B
-A → aaA | aa
-B → aaaB | aaa
-```
-
-a) (0.4 puntos) Encuentre una cadena de `L(G)`, lo más corta posible, que demuestre que `G` es ambigua. 
-
-b) (0.8 puntos) A partir del lenguaje que genera `G`, obtenga un autómata finito (determinista o no, pero sin transiciones vacías) que reconozca `L(G)`. 
-
-c) (0.8 puntos) Obtenga, a partir del autómata anterior, una gramática regular `G'` equivalente a `G`.
-
----
-### 3. Intersección de lenguajes independientes del contexto (2 puntos)
-Considere la siguiente afirmación:
-
-> La intersección de dos lenguajes independientes del contexto es siempre un lenguaje recursivo.
-
-Indique si la afirmación es cierta o no y argumente su respuesta.
-
----
-### 5. Verdadero/Falso y test (2 puntos)
-Preguntas detectadas:
-
-1. ∅* = {ε}.
-2. La concatenación de un lenguaje regular con su complementario es siempre regular.
-3. El lenguaje L = {0$^n$ 1$^m$ | m ≥ n}  es regular.
-4. Dada una gramática `G`, si `G` no es regular, `L(G)` no será regular.
-5. Si `L` es un lenguaje finito, no puede ser independiente del contexto.
-6. Si `L` es independiente del contexto, entonces su complementario es recursivo.
-7. Si `L` es recursivamente enumerable, entonces Σ* - L es recursivamente enumerable.
-8. Θ(11n$^3$ log n$^{10}$) = Θ(8n$^3$ log n$^7$).
-9. T(n) = 16T(n/4) + √n = Θ(n$^2$).
-10. La complejidad del siguiente bloque de código es Θ(n^3):
-
-```cpp
-int suma = 0;
-for (int i = 1; i <= n; i++)
-  for (int j = 1; j <= n; j *= 2)
-    for (int k = 1; k <= j; k++)
-      suma++;
-```
-
----
-
-## ==Febrero 2022==
-
-### 1. Expresión regular y autómata finito (2 puntos)
-Considere el lenguaje L = { 0$^n$ 1$^m$ | n + m es impar } sobre el alfabeto `Σ = {0, 1}`.
-
-a) Especificar una expresión regular que represente a `L`. (1 punto)
-
-b) Diseñar un autómata finito que reconozca `L`. (1 punto)
-
-### 2. Lenguajes independientes del contexto y cierre (2 puntos) ==verificar==
-Sea `P(x)` el prefijo de `x` de longitud 5 si |x| > 5, o `x` si |x| < 5.
-
-Se define:
-
-P$_5$(L) = { P$_5$(x) | x ∈ L }
-
-¿Es el conjunto de los lenguajes independientes del contexto cerrado bajo la operación P$_5$? Justificar la respuesta.
-
-### 3. Máquina de Turing (2 puntos)
-Construir una máquina de Turing que reconozca el lenguaje:
-
-```text
-L = { w ∈ {0, 1}* | n0(w) = n1(w) }
-```
-
-Es decir, cadenas con el mismo número de ceros que de unos.
-
-Antes de diseñar la máquina, explicar brevemente el modo de funcionamiento que se propone para la misma. Para cada transición o conjunto de transiciones de la máquina de Turing, describir lo que se pretende hacer con las transiciones en cuestión. Dibujar el diagrama de transiciones de la máquina.
-
-### 4. Programación dinámica: coeficiente binomial (2 puntos)
-Diseñe un algoritmo de Programación Dinámica, en pseudo-código o C++, que calcule el valor de un coeficiente binomial `C(n, k)`. Para ello, construya una tabla `C[0..n, 0..k]` tal que:
-
-```text
-C[i, j] = 1                         si j = 0
-C[i, j] = 0                         si i = 0 y j ≥ 1
-C[i, j] = C[i - 1, j - 1] + C[i - 1, j]   en otro caso
-```
-
-La solución estará en la celda `C[n, k]`.
-
-Calcule el orden de complejidad del algoritmo diseñado. (0.5 puntos)
-
-Muestre la tabla correspondiente al coeficiente binomial `C(7, 4)`. (0.5 puntos)
-
----
-
 ## ==Junio 2023==
 
 ### 1. Expresión regular, autómata y gramática independiente del contexto (2 puntos)
@@ -322,7 +214,71 @@ for (int a = 1; a <= n; a++)
     for (int c = 1; c <= b; c++)
       suma++;
 ```
- ---
+
+---
+
+## ==Enero 2024/2025
+
+### 1. Expresión regular y DFA mínimo (2 puntos)
+Dada la expresión regular:
+
+```text
+(a|b*)* ca * c
+```
+
+Utilice los algoritmos necesarios para obtener un DFA con un número mínimo de estados que reconozca el lenguaje representado por la expresión.
+
+Explique los pasos que se siguen para pasar de la expresión regular al DFA minimizado. No exponga directamente el autómata minimizado.
+
+---
+### 2. Gramática ambigua, autómata y gramática regular (2 puntos)
+Dada la siguiente gramática `G`:
+
+```text
+S → A | B
+A → aaA | aa
+B → aaaB | aaa
+```
+
+a) (0.4 puntos) Encuentre una cadena de `L(G)`, lo más corta posible, que demuestre que `G` es ambigua. 
+
+b) (0.8 puntos) A partir del lenguaje que genera `G`, obtenga un autómata finito (determinista o no, pero sin transiciones vacías) que reconozca `L(G)`. 
+
+c) (0.8 puntos) Obtenga, a partir del autómata anterior, una gramática regular `G'` equivalente a `G`.
+
+---
+### 3. Intersección de lenguajes independientes del contexto (2 puntos)
+Considere la siguiente afirmación:
+
+> La intersección de dos lenguajes independientes del contexto es siempre un lenguaje recursivo.
+
+Indique si la afirmación es cierta o no y argumente su respuesta.
+
+---
+### 5. Verdadero/Falso y test (2 puntos)
+Preguntas detectadas:
+
+1. ∅* = {ε}.
+2. La concatenación de un lenguaje regular con su complementario es siempre regular.
+3. El lenguaje L = {0$^n$ 1$^m$ | m ≥ n}  es regular.
+4. Dada una gramática `G`, si `G` no es regular, `L(G)` no será regular.
+5. Si `L` es un lenguaje finito, no puede ser independiente del contexto.
+6. Si `L` es independiente del contexto, entonces su complementario es recursivo.
+7. Si `L` es recursivamente enumerable, entonces Σ* - L es recursivamente enumerable.
+8. Θ(11n$^3$ log n$^{10}$) = Θ(8n$^3$ log n$^7$).
+9. T(n) = 16T(n/4) + √n = Θ(n$^2$).
+10. La complejidad del siguiente bloque de código es Θ(n^3):
+
+```cpp
+int suma = 0;
+for (int i = 1; i <= n; i++)
+  for (int j = 1; j <= n; j *= 2)
+    for (int k = 1; k <= j; k++)
+      suma++;
+```
+
+---
+
 ## ==Enero 2026==
 ### 1. Expresión regular, NFA y DFA mínimo (2 puntos)
 Sea L el lenguaje formado por todas las cadenas w, sobre el alfabeto Σ = {a, b}, tal que w comienza por a y tiene una b en la penúltima posición.
@@ -401,3 +357,49 @@ for (int i = 1; i <= n; i *= 2)
   for (int j = 1; j <= n; j++)
     suma++;
 ```
+
+---
+
+## ==Febrero 2022==
+
+### 1. Expresión regular y autómata finito (2 puntos)
+Considere el lenguaje L = { 0$^n$ 1$^m$ | n + m es impar } sobre el alfabeto `Σ = {0, 1}`.
+
+a) Especificar una expresión regular que represente a `L`. (1 punto)
+
+b) Diseñar un autómata finito que reconozca `L`. (1 punto)
+
+### 2. Lenguajes independientes del contexto y cierre (2 puntos) ==verificar==
+Sea `P(x)` el prefijo de `x` de longitud 5 si |x| > 5, o `x` si |x| < 5.
+
+Se define:
+
+P$_5$(L) = { P$_5$(x) | x ∈ L }
+
+¿Es el conjunto de los lenguajes independientes del contexto cerrado bajo la operación P$_5$? Justificar la respuesta.
+
+### 3. Máquina de Turing (2 puntos)
+Construir una máquina de Turing que reconozca el lenguaje:
+
+```text
+L = { w ∈ {0, 1}* | n0(w) = n1(w) }
+```
+
+Es decir, cadenas con el mismo número de ceros que de unos.
+
+Antes de diseñar la máquina, explicar brevemente el modo de funcionamiento que se propone para la misma. Para cada transición o conjunto de transiciones de la máquina de Turing, describir lo que se pretende hacer con las transiciones en cuestión. Dibujar el diagrama de transiciones de la máquina.
+
+### 4. Programación dinámica: coeficiente binomial (2 puntos)
+Diseñe un algoritmo de Programación Dinámica, en pseudo-código o C++, que calcule el valor de un coeficiente binomial `C(n, k)`. Para ello, construya una tabla `C[0..n, 0..k]` tal que:
+
+```text
+C[i, j] = 1                         si j = 0
+C[i, j] = 0                         si i = 0 y j ≥ 1
+C[i, j] = C[i - 1, j - 1] + C[i - 1, j]   en otro caso
+```
+
+La solución estará en la celda `C[n, k]`.
+
+Calcule el orden de complejidad del algoritmo diseñado. (0.5 puntos)
+
+Muestre la tabla correspondiente al coeficiente binomial `C(7, 4)`. (0.5 puntos)
