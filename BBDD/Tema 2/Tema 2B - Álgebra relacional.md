@@ -660,7 +660,141 @@ Compara atributos homónimos considerando que `?` puede coincidir con otro `?` o
 > [!warning]
 > La yunción posibilista es una convención específica del material. No debe confundirse con la igualdad ordinaria de SQL, donde `NULL = valor` no es verdadero, sino desconocido.
 
-### Resumen del álgebra
+---
+
+## 3.17 Renombrado y comparación de una relación consigo misma
+
+La hoja de problemas utiliza consultas en las que hay que comparar dos filas de una misma relación: personas que trabajan en más de una compañía, cuentas de un cliente en sucursales distintas o personas supervisadas por el mismo supervisor.
+
+Para distinguir las dos copias se usa el **operador de renombrado**, que suele escribirse con la letra griega rho:
+
+```text
+ρ(NUEVO_NOMBRE)(R)
+ρ(NUEVO_NOMBRE(nuevo1, nuevo2, ...))(R)
+```
+
+- La primera forma cambia el nombre de la relación.
+- La segunda cambia también los nombres de sus atributos.
+
+> [!example] Personas que trabajan en más de una compañía
+> Partimos de `TRABAJA(nombre-persona, nombre-compañía, salario)` y creamos dos copias:
+>
+> ```text
+> T1(persona1, compañía1, salario1) = TRABAJA
+> T2(persona2, compañía2, salario2) = TRABAJA
+>
+> P(persona1)(
+>   S(persona1 = persona2 ∧ compañía1 ≠ compañía2)(T1 × T2)
+> )
+> ```
+>
+> La igualdad asegura que ambas filas pertenecen a la misma persona y la desigualdad exige dos compañías diferentes.
+
+### Cuándo hace falta renombrar
+
+- al comparar dos filas de una misma tabla;
+- cuando un producto contiene atributos con nombres ambiguos;
+- cuando una yunción natural uniría columnas homónimas que no representan lo mismo;
+- cuando hay que alinear nombres antes de una unión, diferencia o intersección.
+
+> [!warning]
+> Escribir simplemente `R × R` deja dos copias de los mismos nombres de atributo. Aunque se puedan calificar como `R1.A` y `R2.A`, hay que declarar esas copias o renombrarlas para que la expresión sea inequívoca.
+
+---
+
+## 3.18 Patrones lingüísticos frecuentes en problemas
+
+### «Alguno» o «al menos uno»
+
+Se obtiene una relación con las coincidencias necesarias y se proyecta el identificador buscado.
+
+```text
+Personas que trabajan en alguna compañía de La Laguna
+=
+P(nombre-persona)(
+  TRABAJA * S(ciudad-compañía = 'La Laguna')(LOCALIZACIÓN)
+)
+```
+
+### «Ninguno» o «no existe»
+
+Se parte del universo finito de candidatos y se restan los que sí cumplen la propiedad.
+
+```text
+Personas que no trabajan en ninguna compañía
+=
+P(nombre-persona)(VIVE)
+-
+P(nombre-persona)(TRABAJA)
+```
+
+> [!tip]
+> Para resolver «ninguno», formula primero el conjunto positivo «al menos uno» y réstalo del conjunto de candidatos válidos.
+
+### «Solo» o «solamente»
+
+Normalmente significa que **no existe un contraejemplo**. El patrón es:
+
+```text
+candidatos con alguna relación válida
+-
+candidatos con alguna relación prohibida
+```
+
+Por ejemplo, «hombres a quienes solo caen simpáticas mujeres casadas» se resuelve quitando de los hombres con alguna simpatía aquellos relacionados con alguna mujer no casada.
+
+> [!warning]
+> En lenguaje natural, «solo» puede exigir o no la existencia de al menos un caso. En estos ejercicios conviene construir primero el conjunto de candidatos que sí participan en la relación para evitar incluir personas sin ninguna relación por verdad vacía.
+
+### «Todos»
+
+Suele indicar un cociente o una formulación por ausencia de contraejemplos:
+
+```text
+R / S
+```
+
+devuelve los valores relacionados con todos los elementos de `S`.
+
+También puede razonarse así:
+
+```text
+candidatos
+-
+candidatos a los que les falta al menos un elemento obligatorio
+```
+
+### «Al menos dos distintos»
+
+Requiere dos copias renombradas, igualdad en el propietario y desigualdad en el elemento que debe variar.
+
+### «El mínimo» o «el máximo»
+
+Sin agregados, se elimina a quien tiene un competidor mejor:
+
+```text
+cuentas
+-
+cuentas para las que existe otra con saldo menor
+```
+
+Para hallar el máximo se invierte la comparación.
+
+### Construcción por etapas
+
+En expresiones largas es preferible nombrar resultados intermedios:
+
+```text
+LAGUNA = S(ciudad-compañía = 'La Laguna')(LOCALIZACIÓN)
+TRABAJAN_LAGUNA = TRABAJA * LAGUNA
+RESULTADO = P(nombre-persona)(TRABAJAN_LAGUNA)
+```
+
+Esto no cambia el significado y reduce errores de paréntesis, atributos y precedencia.
+
+---
+
+## 3.19 Resumen del álgebra
 
 > [!summary]
 > - Selección filtra filas; proyección elige columnas.
@@ -672,6 +806,8 @@ Compara atributos homónimos considerando que `?` puede coincidir con otro `?` o
 > - Las equivalencias permiten reescribir y optimizar consultas.
 > - Una vista nombra una consulta; una materializada conserva además su resultado.
 > - Los operadores externos incorporan tuplas no emparejadas mediante nulos.
+> - El renombrado permite comparar una relación consigo misma sin ambigüedad.
+> - «Ninguno» suele resolverse con diferencia, «todos» con cociente y «solo» eliminando contraejemplos.
 
 ---
 
